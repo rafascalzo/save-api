@@ -50,7 +50,6 @@ Route::get('/callback', function (Request $request) {
     dd($request->all());
 
     // verificação de state, double check
-
     $response = Http::post('http://localhost:8000/oauth/token', [
         'grant_type' => 'authorization_code',
         'client_id' => 3,
